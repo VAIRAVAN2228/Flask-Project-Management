@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>Smart Tourism Prediction</title>
+ 
+    <!-- Flask Static CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+ 
+<body>
+ 
+<div class="container">
+ 
+    <h1>Smart Tourism Crowd & Revenue Prediction</h1>
+ 
+    <form id="predictionForm">
+ 
+        <input type="number" name="tourists" placeholder="Tourists Count" required>
+ 
+        <input type="number" name="temperature" placeholder="Temperature" required>
+ 
+        <select name="holiday">
+            <option value="1">Holiday</option>
+            <option value="0">Non-Holiday</option>
+        </select>
+ 
+        <select name="event">
+            <option value="1">Event Available</option>
+            <option value="0">No Event</option>
+        </select>
+ 
+        <button type="button" onclick="predictRevenue()">
+            Predict Revenue
+        </button>
+ 
+    </form>
+ 
+    <h2 id="result"></h2>
+ 
+</div>
+ 
+<!-- Flask Static JS -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+ 
+</body>
+</html>
+ 
